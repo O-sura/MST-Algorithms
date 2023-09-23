@@ -95,24 +95,24 @@ def run_prims(graph):
         return "MST not possible, the graph may be disconnected"
 
 #Driver Code
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    num_nodes = 10
-    is_dense = False
-    use_matrix = True
+#     num_nodes = 10
+#     is_dense = False
+#     use_matrix = True
 
-    adjacency_data = generate_graph(num_nodes, is_dense, use_matrix)
+#     adjacency_data = generate_graph(num_nodes, is_dense, use_matrix)
 
-    if use_matrix:
-        print("Adjacency Matrix:")
-        print(adjacency_data)
-    else:
-        print("Adjacency List (Node: {Neighbor: Weight}):")
-        #print(adjacency_data)
-        [print(i,':',j) for i, j in adjacency_data.items()]
+#     if use_matrix:
+#         print("Adjacency Matrix:")
+#         print(adjacency_data)
+#     else:
+#         print("Adjacency List (Node: {Neighbor: Weight}):")
+#         #print(adjacency_data)
+#         [print(i,':',j) for i, j in adjacency_data.items()]
 
-    mst, total_cost = run_prims(adjacency_data)
-    print("Minimum Spanning Tree Edges:")
-    for edge in mst:
-        print(edge)
-    print("Total Cost:", total_cost)
+#     mst, total_cost = run_prims(adjacency_data)
+#     print("Minimum Spanning Tree Edges:")
+#     for edge in mst:
+#         print(edge)
+#     print("Total Cost:", total_cost)

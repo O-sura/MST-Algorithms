@@ -49,27 +49,28 @@ class Graph:
 
         # Print the MST edges and their weights
         total_weight = 0
+        print("Minimum Spanning Tree Edges:\n")
         for i in range(1, self.V):
             total_weight += key[i]
-            print(f"Edge: {parent[i]} - {i}, Weight: {key[i]}")
+            print(f"{parent[i]} --- {i}")
 
         print(f"Total Weight of MST: {total_weight}")
 
 
 # Create a graph from the adjacency data and run MST algorithm
-num_nodes = 10
-is_dense = True
-use_matrix = False
+# num_nodes = 10
+# is_dense = True
+# use_matrix = False
 
-adjacency_data = generate_graph(num_nodes, is_dense, use_matrix)
+# adjacency_data = generate_graph(num_nodes, is_dense, use_matrix)
 
-if use_matrix:
-    print("Adjacency Matrix:")
-    print(adjacency_data)
-else:
-    print("Adjacency List (Node: {Neighbor: Weight}):")
-    #print(adjacency_data)
-    [print(i,':',j) for i, j in adjacency_data.items()]
+# if use_matrix:
+#     print("Adjacency Matrix:")
+#     print(adjacency_data)
+# else:
+#     print("Adjacency List (Node: {Neighbor: Weight}):")
+#     #print(adjacency_data)
+#     [print(i,':',j) for i, j in adjacency_data.items()]
 
-g = Graph(adjacency_data)
-g.prim_mst()
+# g = Graph(adjacency_data)
+# g.prim_mst()

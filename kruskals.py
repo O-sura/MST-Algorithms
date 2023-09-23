@@ -67,8 +67,11 @@ class Graph:
                     result.append([u, v, w])
                     self.apply_union(parent, rank, x, y)
 
+            w = 0
             for u, v, weight in result:
-                print("%d - %d: %d" % (u, v, weight))
+                print("%d - %d" % (u, v))
+                w += weight
+            print("\nTotal weight:", w)
             
         else:
             # Process adjacency matrix
@@ -93,26 +96,29 @@ class Graph:
                     result.append([u, v, w])
                     self.apply_union(parent, rank, x, y)
 
+            w = 0
             for u, v, weight in result:
-                print("%d - %d: %d" % (u, v, weight))
+                print("%d - %d" % (u, v))
+                w += weight
+            print("\nTotal weight:", w)
 
 
 
 # Example usage:
-num_nodes = 10
-is_dense = False
-use_matrix = False
+# num_nodes = 10
+# is_dense = False
+# use_matrix = False
 
-adjacency_data = generate_graph(num_nodes, is_dense, use_matrix)
+# adjacency_data = generate_graph(num_nodes, is_dense, use_matrix)
 
-if use_matrix:
-    print("Adjacency Matrix:")
-    print(adjacency_data)
-else:
-    print("Adjacency List (Node: {Neighbor: Weight}):")
-    #print(adjacency_data)
-    [print(i,':',j) for i, j in adjacency_data.items()]
+# if use_matrix:
+#     print("Adjacency Matrix:")
+#     print(adjacency_data)
+# else:
+#     print("Adjacency List (Node: {Neighbor: Weight}):")
+#     #print(adjacency_data)
+#     [print(i,':',j) for i, j in adjacency_data.items()]
 
-graph = Graph(adjacency_data)
-print("\nMinimum Spanning Tree (Kruskal's Algorithm):")
-graph.kruskal_algo()
+# graph = Graph(adjacency_data)
+# print("\nMinimum Spanning Tree (Kruskal's Algorithm):")
+# graph.kruskal_algo()
