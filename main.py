@@ -7,7 +7,7 @@ import random
 
 
 # Example usage:
-num_nodes = random.randint(10,100)
+num_nodes = random.randint(5000,6000)
 is_dense = True
 use_matrix = True
 
